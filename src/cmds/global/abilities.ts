@@ -6,7 +6,7 @@ import { Command } from 'src/@types/Util.js';
 export async function run(interaction: CommandInteraction): Promise<Message | void> {
     const abilities = await gideonapi.abilities();
 
-    if (interaction.options.data[0]?.value === 'speedster') {
+    if (interaction.options.data[0]?.value === 'speedsters') {
         const sp1 = new MessageEmbed()
             .setColor('#2791D3')
             .setTitle('__Speedsters possess the following abilities:__')
@@ -67,7 +67,7 @@ export async function run(interaction: CommandInteraction): Promise<Message | vo
         const spembeds = [sp1, sp2, sp3, sp4, sp5, sp6];
         return interaction.reply({embeds: spembeds});
     
-    } else if (interaction.options.data[0]?.value === 'viber') {
+    } else if (interaction.options.data[0]?.value === 'vibers') {
         const viber = new MessageEmbed()
             .setColor('#2791D3')
             .setTitle('__Vibers possess the following abilities:__') 
@@ -80,7 +80,7 @@ export async function run(interaction: CommandInteraction): Promise<Message | vo
             .setFooter(Util.config.footer, process.gideon.user?.displayAvatarURL());
 
         return interaction.reply({embeds: [viber]});
-    } else if (interaction.options.data[0]?.value === 'kryptonian') {
+    } else if (interaction.options.data[0]?.value === 'kryptonians') {
         const kr1 = new MessageEmbed()
             .setColor('#2791D3')
             .setTitle('__Kryptonians possess the following abilities:\n(Only when exposed to a yellow sun\'s energy)__')
@@ -166,15 +166,15 @@ export const data: Command['data'] = {
             choices: [
                 {
                     name: 'Speedsters',
-                    value: 'speedster'
+                    value: 'speedsters'
                 },
                 {
                     name: 'Vibers',
-                    value: 'viber'
+                    value: 'vibers'
                 },
                 {
                     name: 'Kryptonian',
-                    value: 'kryptonian'
+                    value: 'kryptonians'
                 }
             ]
         }
