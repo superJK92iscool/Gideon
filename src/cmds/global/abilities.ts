@@ -6,7 +6,7 @@ import { footer } from '#config/config';
 export async function run(interaction: CommandInteraction): Promise<Message | undefined> {
 	const abilities = await gideonapi.abilities();
 
-	if (interaction.options.data[0]?.value === 'speedster') {
+	if (interaction.options.data[0]?.value === 'speedsters') {
 		const sp1 = new MessageEmbed()
 			.setColor('#2791D3')
 			.setTitle('__Speedsters possess the following abilities:__')
@@ -66,7 +66,7 @@ export async function run(interaction: CommandInteraction): Promise<Message | un
 
 		const spembeds = [sp1, sp2, sp3, sp4, sp5, sp6];
 		return void interaction.reply({ embeds: spembeds });
-	} else if (interaction.options.data[0]?.value === 'viber') {
+	} else if (interaction.options.data[0]?.value === 'vibers') {
 		const viber = new MessageEmbed()
 			.setColor('#2791D3')
 			.setTitle('__Vibers possess the following abilities:__')
@@ -79,7 +79,7 @@ export async function run(interaction: CommandInteraction): Promise<Message | un
 			.setFooter(footer, interaction.client.user?.displayAvatarURL());
 
 		return void interaction.reply({ embeds: [viber] });
-	} else if (interaction.options.data[0]?.value === 'kryptonian') {
+	} else if (interaction.options.data[0]?.value === 'kryptonians') {
 		const kr1 = new MessageEmbed()
 			.setColor('#2791D3')
 			.setTitle("__Kryptonians possess the following abilities:\n(Only when exposed to a yellow sun's energy)__")
